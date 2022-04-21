@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import "./style/common.scss";
-import Header from "./layout/header/index.vue";
+import NavBar from "./components/NavBar.vue";
 </script>
 
 <template>
+  <NavBar />
   <main class="font-sans">
-    <Header />
     <router-view />;
   </main>
 </template>

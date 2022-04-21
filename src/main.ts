@@ -1,5 +1,5 @@
-import "@unocss/reset/tailwind.css";
-import "uno.css";
+import "virtual:windi.css";
+import "@purge-icons/generated";
 
 import App from "./App.vue";
 import autoRoutes from "pages-generated";

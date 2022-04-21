@@ -5,8 +5,8 @@ import matter from "gray-matter";
 import Vue from "@vitejs/plugin-vue";
 import VueJsx from "@vitejs/plugin-vue-jsx";
 import Pages from "vite-plugin-pages";
-import Unocss from "unocss/vite";
-import { presetUno, presetAttributify, presetIcons } from "unocss";
+import WindiCSS from "vite-plugin-windicss";
+import PurgeIcons from "vite-plugin-purge-icons";
 
 const config: UserConfig = {
   resolve: {
@@ -17,13 +17,8 @@ const config: UserConfig = {
   plugins: [
     Vue({ reactivityTransform: true }),
     VueJsx(),
-    Unocss({
-      presets: [
-        presetUno(),
-        presetAttributify(),
-        presetIcons(),
-      ],
-    }),
+    WindiCSS(),
+    PurgeIcons(),
     Pages({
       extensions: ["vue", "md"],
       pagesDir: "pages",
