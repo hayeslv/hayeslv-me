@@ -1,9 +1,13 @@
 <script setup lang="ts">
 import "./style/common.scss";
+import Header from "./layout/header/index.vue";
 </script>
 
 <template>
-  <router-view />;
+  <main class="font-sans">
+    <Header />
+    <router-view />;
+  </main>
 </template>
 
 <style>

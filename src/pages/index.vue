@@ -4,13 +4,11 @@ import Foo from "~/components/Foo";
 </script>
 
 <template>
+  <button class="bg-white dark:bg-black">
+    click me
+  </button>
+  <div class="i-ic-baseline-add-circle text-3xl bg-green-500" />
   <div>
-    <p>
-      <a href="https://github.com/hayeslv/vites/" target="_blank">Vites</a>
-    </p>
-    <p>
-      <em>Vite Starter Template</em>
-    </p>
     <Foo />
   </div>
 </template>
