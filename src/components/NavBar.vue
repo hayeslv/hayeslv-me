@@ -3,17 +3,36 @@ import { isDark } from "~/composables";
 </script>
 
 <template>
-  <header class="header z-40">
-    <router-link
-      class="w-10 h-10 m-6 fixed select-none outline-none"
-      to="/"
-      focusable="false"
-    >
-      <img v-show="isDark" class="w-10 h-10" src="/logo-dark.svg?url" alt="logo">
-      <img v-show="!isDark" class="w-10 h-10" src="/logo.svg?url" alt="logo">
-    </router-link>
+  <header class="header">
+    <div class="nav-background shadow-sm">
+      <div class="container">
+        <router-link
+          class="m-6 select-none outline-none flex items-center"
+          to="/"
+          focusable="false"
+        >
+          <img v-show="isDark" class="w-6 h-6 inline-block" src="/logo-dark.svg?url" alt="logo">
+          <img v-show="!isDark" class="w-6 h-6 inline-block" src="/logo.svg?url" alt="logo">
+          <span class="text-xl ml-2">Hayeslv</span>
+        </router-link>
+        <nav class="nav">
+          <div class="spacer w-px" />
+          <div class="right">
+            <router-link to="/blog">
+              <span>博客</span>
+            </router-link>
+            <router-link to="/projects">
+              <span>项目</span>
+            </router-link>
+            <a href="https://github.com/hayeslv" target="_blank" title="GitHub" class="lt-md:hidden">
+              <span class="iconify w-5 h-5" data-icon="uil:github-alt" />
+            </a>
+          </div>
+        </nav>
+      </div>
+    </div>
   </header>
-  <nav class="nav">
+  <!-- <nav class="nav">
     <div class="spacer w-px" />
     <div class="right">
       <router-link to="/projects">
@@ -23,10 +42,25 @@ import { isDark } from "~/composables";
         <span class="iconify w-5 h-5" data-icon="uil:github-alt" />
       </a>
     </div>
-  </nav>
+  </nav> -->
 </template>
 
 <style lang="scss" scoped>
+.nav-background{
+  background: #F8F9FA;
+  border-bottom: 2px solid #000000;
+}
+.shadow-sm {
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+.container{
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 1140px;
+}
 .logo {
   position: absolute;
   top: 1.5rem;
@@ -35,7 +69,6 @@ import { isDark } from "~/composables";
 .nav{
   box-sizing: border-box;
   display: flex;
-  padding: 2rem;
   width: 100%;
   > * {
     margin: auto

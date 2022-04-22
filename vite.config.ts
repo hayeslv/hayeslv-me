@@ -12,6 +12,7 @@ const config: UserConfig = {
   resolve: {
     alias: {
       "~": `${resolve(__dirname, "src")}/`,
+      "~image": `${resolve(__dirname, "src/assets/image")}/`,
     },
   },
   plugins: [

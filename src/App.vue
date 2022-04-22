@@ -6,7 +6,7 @@ import NavBar from "./components/NavBar.vue";
 <template>
   <NavBar />
   <main class="font-sans">
-    <router-view />;
+    <router-view />
   </main>
 </template>
 
