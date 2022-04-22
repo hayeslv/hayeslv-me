@@ -7,7 +7,7 @@ import { isDark } from "~/composables";
     <div class="nav-background shadow-sm">
       <div class="container">
         <router-link
-          class="m-6 select-none outline-none flex items-center"
+          class="my-6 select-none outline-none flex items-center"
           to="/"
           focusable="false"
         >
@@ -57,7 +57,6 @@ import { isDark } from "~/composables";
   display: flex;
   width: 100%;
   box-sizing: border-box;
-  padding: 0 15px;
   margin: 0 auto;
   max-width: 1140px;
 }

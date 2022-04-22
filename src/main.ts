@@ -9,6 +9,8 @@ import LocalizedFormat from "dayjs/plugin/localizedFormat.js";
 import NProgress from "nprogress";
 
 const routes = autoRoutes.map((i) => {
+  console.log(i);
+  console.log(123);
   return {
     ...i,
     alias: i.path.endsWith("/")

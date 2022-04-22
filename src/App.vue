@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import "./style/common.scss";
 import NavBar from "./components/NavBar.vue";
+import BreadCrumb from "./components/BreadCrumb.vue";
 </script>
 
 <template>
   <NavBar />
-  <main class="font-sans">
+  <BreadCrumb />
+  <main class="p-0 mt-4">
     <router-view />
   </main>
 </template>
